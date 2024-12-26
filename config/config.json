@@ -1,0 +1,39 @@
+{
+    "models": {
+        "summarise": {
+            "model": "granite3.1-dense:2b",
+            "system_prompt": "You are a helpful AI research assistant. Your task is to create clear, concise summaries of scientific papers. Focus on the key findings, methodology, and implications. Be precise and maintain academic tone. Avoid speculation or personal opinions. Response should be very concise, just a few sentences."
+        },
+        "relevance": {
+            "model": "granite3.1-dense:2b",
+            "system_prompt": "You are a helpful AI research assistant. Your task is to determine if a paper is relevant to a given query. Respond with 'relevant' or 'not relevant'."
+        }
+    },
+    "queries": {
+        "JEPA": {
+            "keywords": [
+                "\"world model\" OR \"world models\"",
+                "\"JEPA\" OR \"joint embedding predictive architecture\""
+            ],
+            "date_range": {
+                "from": "lastWeek",
+                "to": "today"
+            },
+            "max_results": 2
+        },
+        "YLC": {
+            "keywords": [
+                "\"Yann LeCun\" OR \"Yann Le Cun\""
+            ],
+            "authors": [
+                "Yann LeCun",
+                "Yann Le Cun"
+            ],
+            "date_range": {
+                "from": "lastWeek",
+                "to": "today"
+            },
+            "max_results": 4
+        }
+    }
+} 
