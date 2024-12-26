@@ -1,0 +1,62 @@
+name: Daily AI News Workflow
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # Runs at 3 AM UTC daily
+  workflow_dispatch:
+    inputs:
+      start_from:
+        description: 'Start workflow from specific step'
+        required: false
+        type: choice
+        options:
+        - clear
+        - fetch
+        - download
+        - parse
+        - extract
+        - summarise
+      show_summaries:
+        description: 'Show summaries after completion'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  run-workflow:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run workflow
+      run: |
+        if [ "${{ github.event.inputs.start_from }}" != "" ]; then
+          python scripts/workflow.py --start-from ${{ github.event.inputs.start_from }}
+        else
+          python scripts/workflow.py
+        fi
+        
+        if [ "${{ github.event.inputs.show_summaries }}" == "true" ]; then
+          python scripts/workflow.py --show-summaries
+        fi
+    
+    - name: Upload logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: workflow-logs
+        path: |
+          workflow.log
+          logs/*.log
