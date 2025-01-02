@@ -28,7 +28,7 @@ llama-index==0.10.35
 markdown-it-py==3.0.0
 marko==2.1.2
 mdurl==0.1.2
-mlx==0.4.0
+mlx
 notebook==7.3.2
 npx==0.1.6
 numpy==2.2.1
