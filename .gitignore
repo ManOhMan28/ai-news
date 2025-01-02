@@ -1,3 +1,6 @@
+# Conversions
+conversions/
+
 # Database files
 *.db
 database/*.db
@@ -21,3 +24,6 @@ venv/
 
 # OS files
 .DS_Store
+
+# Misc files
+zmisc/
