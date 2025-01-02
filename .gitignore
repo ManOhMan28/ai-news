@@ -11,6 +11,9 @@ database/*.sqlite3
 pdfs/*.pdf
 *.pdf
 
+# test_relevance
+test_relevance/
+
 # Log files
 *.log
 logs/
