@@ -1,0 +1,8 @@
+{
+  "2412.19505v2": {
+    "summary": "This study introduces DrivingWorld, an enhanced GPT-style world model for autonomous driving, addressing limitations in previous video generation methods. Unlike classic GPT, which excels at 1D contextual information (e.g., text), DrivingWorld effectively models spatial and temporal dynamics crucial for video prediction. It employs a next-state prediction strategy to maintain temporal coherence between frames and a next-token prediction strategy for spatial detail within each frame. Compared to prior works, DrivingWorld generates more realistic, longer video sequences with improved generalization, offering better action control and reduced reliance on extensive labeled data. Future work will focus on refining the model further."
+  },
+  "2412.18607v1": {
+    "summary": "This research introduces DrivingGPT, a model that integrates visual world modeling (using autoregressive transformers) and trajectory planning into a unified sequence problem. It employs interleaved image and action tokens to create a multimodal driving language. The model outperforms existing methods in action-conditioned video generation and end-to-end planning, as demonstrated on large-scale nuPlan and NAVSIM benchmarks, showcasing the potential of unifying visual generation and motion prediction for advanced physical intelligence applications."
+  }
+}

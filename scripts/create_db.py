@@ -4,7 +4,7 @@ from pathlib import Path
 # Define paths relative to script location
 SCRIPT_DIR = Path(__file__).parent  # testing directory
 PROJECT_ROOT = SCRIPT_DIR.parent.parent  # go up two levels
-DB_PATH = PROJECT_ROOT / "database" / "arxiv_docs.db"
+DB_PATH = PROJECT_ROOT / "ai-news"/ "database" / "arxiv_docs.db"
 
 def create_database():
     """Create the database and its tables"""
