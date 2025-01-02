@@ -1,3 +1,9 @@
+# options:
+#   -h, --help            show this help message and exit
+#   --start-from {clear,fetch,download,parse,extract,summarise}
+#                         Start workflow from a specific step
+#   --show-summaries      Run workflow and display summaries at the end
+
 import os
 import json
 import logging

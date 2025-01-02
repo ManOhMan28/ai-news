@@ -19,7 +19,7 @@
                 "from": "lastWeek",
                 "to": "today"
             },
-            "max_results": 2
+            "max_results": 1
         },
         "YLC": {
             "keywords": [
