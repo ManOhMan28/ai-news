@@ -2,7 +2,7 @@ name: Daily AI News Workflow
 
 on:
   schedule:
-    - cron: '12 18 * * *'  # This will run at 09:28 UTC (11:28 Paris time)
+    - cron: '45 18 * * *'  # This will run at 09:28 UTC (11:28 Paris time)
   workflow_dispatch:
     inputs:
       start_from:
